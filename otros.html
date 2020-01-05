@@ -1,0 +1,325 @@
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+	<!-- Bootstrap CSS -->
+	<link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<!-- Fonts -->
+	<!-- <link href="https://www.fontify.me/wf/673b8fe0d791bfec7e056e8cdff6c3a0" rel="stylesheet" type="text/css"> -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css">
+	<title>Fastfix</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- <link rel="stylesheet" href="css/pignose.calendar.css"> -->
+	
+</head>
+<style>
+	body {
+		font-family: font112192;
+	}
+
+	.color-nw {
+		color: #4A4F64
+	}
+
+	.color-nf-p {
+		color: #686F8C !important;
+	}
+
+	.p-nf-color {
+		display: inline;
+	}
+
+	.p-nf-cel {
+		color: #686F8C !important;
+		font-size: 14px;
+		margin-top: 9px !important;
+	}
+
+	.p-fn-sub {
+		font-size: 16px;
+		line-height: 19px;
+		color: #4A4F64;
+		font-weight: bold;
+	}
+</style>
+<script type="text/javascript">
+	currtentUrl = window.location.href; 
+	var arr = decodeURI(currtentUrl).split('#');
+	var InfoArr = arr[1].split("&");
+	console.log(InfoArr.length);
+	iphone = InfoArr[0];
+	color = InfoArr[1];
+	powerStatus = InfoArr[2];
+	price = InfoArr[3];
+	problems = [];
+	for (var i = 4; i < InfoArr.length; i++) {
+		problems[i-4] = InfoArr[i];
+	}
+
+</script>
+<body>
+	<nav class="navbar navbar-expand-lg navInt">
+		<div class="container">
+			<a class="navbar-brand ml-1" href="./index.html"><img src="img/logo-n.png" alt=""></a>
+			<a class="nav-link btnSite d-lg-none ml-auto" href="#">Fix Now</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+				aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+				<i class="fas fa-bars"></i>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarText">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="./index.html">Inicio <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="./nosotros.html">Nosotros</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="./servicios.html">Servicios</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Knowledge Bar</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link btnSite" href="./fix-now.html">Fix Now</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container" style="height: 40px;">
+		<div class="row">
+			<nav aria-label="breadcrumb ">
+				<ol class="breadcrumb bg-white" style="font-size:12px;">
+					<li class="breadcrumb-item"><a href="#">Home</a></li>
+					<li class="breadcrumb-item active" aria-current="page">Fix Now</li>
+				</ol>
+			</nav>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<nav aria-label="breadcrumb ">
+				<ol class="breadcrumb bg-white" style="font-size:12px;">
+					<li class="breadcrumb-item "><a href="fix-now.html"> <i class="fas fa-chevron-left h4 align-middle"></i> <span class="align-text-bottom ml-1" >Volver al diagnótico</span></a></li>
+				</ol>
+			</nav>
+		</div>
+	</div>
+	
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 ml-auto">
+				<h3 class="color-nw">Contacto</h3>
+				<p class="color-nf-p">Deja tus datos para confirmar el pedido.</p>
+				<div class="col-md-9" style="padding-left: 1px;">
+					<div class="form-group matLabel active">
+						<label>Nombre completo</label>
+						<input type="text" class="form-control">
+					</div>
+					<div class="form-group matLabel">
+						<label>Correo Electrónico</label>
+						<input type="text" class="form-control">
+					</div>
+					<div class="form-group matLabel">
+						<label>Teléfono</label>
+						<input type="text" class="form-control">
+					</div>
+					<div class="col-md-12" style="padding-left: 1px;">
+						<h4 class="color-nw"> Diagnóstico del teléfono</h4>
+						<p class="color-nf-p">Sigue esto pasos para realizar el diagnóstico del teléfono</p>
+					</div>
+
+						<div class="form-row">
+							<div class="form-group col-md-6 matLabel" id="datetimepicker1">
+								<label>Fecha <i class="fas fa-calendar-alt" style="margin-left: 90px; font-size: 20px;"></i></label>
+								<input type="text" placeholder="" class="form-control form_datetime" data-provide="datepicker">
+							</div>			
+							<div class="form-group col-md-6  matLabel">
+								<label for="inputEmail4">Hora <i class="fas fa-clock" style="margin-left: 90px; font-size: 20px;"></i></label>
+								<input type="text" class="form-control form_time" data-provide="timepicker" id="text" placeholder="">
+								
+							</div>
+						</div>
+						<div class="form-group matLabel">
+							<label>Dirección</label>
+							<input type="text" class="form-control">
+						</div>
+						<!-- <img class="mt-1 mb-3" src="./img/map.png"  width="400" alt=""> -->
+						<div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px">
+							<iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed"
+								frameborder="0" style="border:0" allowfullscreen></iframe>
+						</div>
+						
+						<div class="form-group matLabel">
+							<label>Comentarios (opcional)</label>
+							<textarea class="form-control" rows="3"></textarea>
+						</div>
+						<div class="text-center">
+						<a href="#" class="btnSite">Enviar</a>
+
+						</div>															
+				</div>
+					<br>																
+			</div>
+			<div class="col-md-6 ml-auto">
+				<div class="detallePedido position-fixed" >
+					<h5 class="mt-3 ml-5 color-nf-p">Detalle del pedido</h5>
+					<div class="productoPedido">
+						<img src="img/iphone-x-.png" alt="">
+						<div class="infoPedido">
+							<h4>Modelo</h4>
+							<p class="color-nf-p" id="model">iPhone 6</p>
+							<h4>Color</h4>
+							<p class="color-nf-p" id="color">Space grey</p>
+							<h4>Prendido o apagado</h4>
+							<p class="color-nf-p" id="powerStatus">Prendido</p>
+							<h4>Problemas</h4>
+							<ul class="color-nf-p" id="problems" style="font-size: 12px;">							
+<!-- 								<li type="disc"><strong>Pantalla:</strong> Vidrio dañado</li>		
+								<li type="disc"><strong>Sonido:</strong> Auricular, volumen bajo</li> -->
+							</ul>
+						</div>
+					</div>
+					<div class="productoResumen" style="">
+						<p class="textLeft color-nf-p" style="font-size: 14px;">Costo reparación</p>
+						<p class="textRight" id="repairPrice" style="font-size: 16px;">S/150</p>				
+					</div>
+					<div class="productoResumen" style="border-bottom: 1px solid #c9c9c9;">
+						<p class="textLeft color-nf-p" style="font-size: 14px;">Recargo por delivery</p>
+						<p class="textRight" id="deliveryPrice" style="font-size: 16px;">S/5</p>				
+					</div>
+					<div class="productoResumen">
+						<p class="textLeft color-nf-p">Total aproximado</p>
+						<p class="textRight" id="totalPrice" style="font-size: 20px; color: #0BB0FD;">S/150</p>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-md-12 col-lg-4">
+					<img class="logo" src="img/logo.png" alt="">
+					<p class="copy">© 2019 Fastfix. Todos los derechos reservados.</p>
+				</div>
+				<div class="col-sm-12 col-md-12 col-lg-4">
+					<ul>
+						<li><a href="./nosotros.html">Nosotros</a></li>
+						<li><a href="./servicios.html">Servicios</a></li>
+						<li><a href="#">Knowledge Bar</a></li>
+					</ul>
+				</div>
+				<div class="col-sm-12 col-md-12 col-lg-3 ml-auto">
+					<p>spanConsigue un diagnóstico</p>
+					<a href="./fix-now.html" class="btnSiteA">Fix Now</a>
+					<p class="socialFotter"><span>Síguenos en</span> <a href="#"><i class="fab fa-facebook-f"></i></a>
+						<a href="#"><i class="fab fa-instagram"></i></a></p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+		aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+					<h2>Selecciona el <strong>color</strong> de tu dispositivo</h2>
+					<div class="colColors">
+						<a href="#" class="colColor" data-dismiss="modal">
+							<span class="silver"></span>
+							<p>Silver</p>
+						</a>
+						<a href="#" class="colColor" data-dismiss="modal">
+							<span class="gray"></span>
+							Space Gray
+						</a>
+						<br>
+						<a href="#" class="colColor" data-dismiss="modal">
+							<span class="gold"></span>
+							Gold
+						</a>
+						<a href="#" class="colColor" data-dismiss="modal">
+							<span class="rose"></span>
+							Rose Gold
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script crossorigin="anonymous" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script crossorigin="anonymous" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script crossorigin="anonymous" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+
+			$('#model').text(iphone);
+			$('#color').text(color);
+			$('#powerStatus').text(powerStatus);
+			if(problems.length != 0){
+				for (var i = 0; i < problems.length; i++) {
+					$('#problems').append('<li type="disc">'+problems[i]+'</li>');
+				}
+			}else{
+				$('#problems').append('<li type="disc">No especificado</li>');
+			}
+
+			$('#repairPrice').text("S/"+price);
+			if(price == "ND")
+			{
+				$('#totalPrice').text("S/5");
+			}else{
+				totalprice = parseInt(price) + 5 + 0;
+				$('#totalPrice').text("S/"+ totalprice);
+			}
+		});
+
+		$('.matLabel').click(function () {
+			$(this).addClass("active");
+		});
+		$(function () {
+            $('#datetimepicker9').datetimepicker({
+                icons: {
+                    time: "fa fa-clock-o",
+                    date: "fa fa-calendar",
+                    up: "fa fa-arrow-up",
+                    down: "fa fa-arrow-down"
+                }
+            });
+        });
+		$(".form_datetime").datetimepicker({
+			    format: 'YYYY-MM-DD',
+			    icons:{
+			    	leftArrow: '<i class="fa fa-long-arrow-left"></i>',
+    				rightArrow: '<i class="fas fa-angle-right"></i>'
+			    }
+		});
+		$(".form_time").datetimepicker({
+			    format: 'hh:mm:ss',
+		});
+	</script>
+</body>
+
+</html>
